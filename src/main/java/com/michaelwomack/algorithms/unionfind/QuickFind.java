@@ -1,6 +1,13 @@
 package com.michaelwomack.algorithms.unionfind;
 
 public class QuickFind implements UnionFind {
+    /**
+     * QuickFind is the eager approach. p and q are connected if they
+     * have the same id (id[p] == id[q]). To Union components containing
+     * p and q, change all entries whose id equals id[p] to id[q]. This model is slow
+     * because it takes N^2 array accesses to process a sequence of N union commands
+     * on N objects.
+     */
 
     private int[] id;
 
